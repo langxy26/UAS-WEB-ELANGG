@@ -1,9 +1,49 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>UAS</title>
-    </head>
-    <body>
-        <h2>Hello World</h2>
-    </body>
+<div class="container">
+    <h2>Data Mahasiswa & Usia</h2>
+    
+    <input type="text" id="inputNama" placeholder="Nama Mahasiswa">
+    <input type="text" id="inputNIM" placeholder="NIM">
+    <input type="text" id="inputTahunLahir" placeholder="Tahun Lahir (Contoh: 2002)">
+
+    <button id="btnTampilkan">Tampilkan</button>
+
+    <div id="hasil-output">
+        </div>
+</div>
+
+<script>
+    function hitungUsia(tahunLahir) {
+        const tahunSekarang = new Date().getFullYear();
+        if (isNaN(tahunLahir) || tahunLahir < 1900 || tahunLahir > tahunSekarang) {
+            return "Tahun tidak valid";
+        }
+        const usia = tahunSekarang - tahunLahir;
+        return usia;
+    }
+
+    function tampilkanData() {
+        const nama = document.getElementById('inputNama').value;
+        const nim = document.getElementById('inputNIM').value;
+        const tahunLahir = parseInt(document.getElementById('inputTahunLahir').value);
+        
+        const outputDiv = document.getElementById('hasil-output');
+        
+        if (!nama || !nim || isNaN(tahunLahir)) {
+            outputDiv.innerHTML = '<p style="color: red;">Semua kolom harus diisi!</p>';
+            return;
+        }
+
+        const usiaHasil = hitungUsia(tahunLahir);
+
+        outputDiv.innerHTML = `
+            <p class="output-line"><span class="output-label">Nama :</span> ${nama}</p>
+            <p class="output-line"><span class="output-label">NIM :</span> ${nim}</p>
+            <p class="output-line"><span class="output-label">Usia :</span> ${usiaHasil} tahun</p>
+        `;
+    }
+
+    document.getElementById('btnTampilkan').addEventListener('click', tampilkanData);
+</script>
+
+</body>
 </html>
