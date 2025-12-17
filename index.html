@@ -1,49 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Portofolio</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="form-validasi.js"></script>
+</head>
+<body>
+
+<header>
 <div class="container">
-    <h2>Data Mahasiswa & Usia</h2>
-    
-    <input type="text" id="inputNama" placeholder="Nama Mahasiswa">
-    <input type="text" id="inputNIM" placeholder="NIM">
-    <input type="text" id="inputTahunLahir" placeholder="Tahun Lahir (Contoh: 2002)">
-
-    <button id="btnTampilkan">Tampilkan</button>
-
-    <div id="hasil-output">
-        </div>
+<div class="header-content">
+<div class="logo">M.Gilang</span></div>
+ <div class="mobile-menu"></div>
+<nav>
+<ul>
+<li><a href="#home">Beranda</a></li>
+<li><a href="#features">Fitur</a></li>
+<li><a href="#about">Tentang</a></li>
+<li><a href="#testimonials">Testimoni</a></li>
+<li><a href="#contact">Kontak</a></li>
+</ul>
+</nav>
 </div>
+</div>
+</header>
 
-<script>
-    function hitungUsia(tahunLahir) {
-        const tahunSekarang = new Date().getFullYear();
-        if (isNaN(tahunLahir) || tahunLahir < 1900 || tahunLahir > tahunSekarang) {
-            return "Tahun tidak valid";
-        }
-        const usia = tahunSekarang - tahunLahir;
-        return usia;
-    }
+<section class="hero" id="home">
+ <div class="container">
+<div class="hero-content">
+<h1>Website Portofolio Pribadi</h1>
+<p>Selamat Datang Di Web Portofolio Pribadi Saya.</p>
+ <a href="#contact" class="btn">Hubungi Kami</a>
+</div>
+</section>
 
-    function tampilkanData() {
-        const nama = document.getElementById('inputNama').value;
-        const nim = document.getElementById('inputNIM').value;
-        const tahunLahir = parseInt(document.getElementById('inputTahunLahir').value);
-        
-        const outputDiv = document.getElementById('hasil-output');
-        
-        if (!nama || !nim || isNaN(tahunLahir)) {
-            outputDiv.innerHTML = '<p style="color: red;">Semua kolom harus diisi!</p>';
-            return;
-        }
+<main class="main-content">
+<div class="container">
 
-        const usiaHasil = hitungUsia(tahunLahir);
+<section id="features">
+<div class="section-title">
+<h2>PORTFOLIO</h2>
+<p>Kami menyediakan berbagai fitur terbaik untuk memenuhi kebutuhan website Anda</p>
+</div>
+<div class="features">
+<div class="feature-card">
+<div class="feature-icon"></div>
+<h3>Desain Responsif</h3>
+<p>Website akan tampil optimal di semua perangkat, baik desktop, tablet, maupun smartphone.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon"> </div>
+<h3>Performa Cepat</h3>
+<p>Dibangun dengan teknologi terbaru untuk memastikan kecepatan loading yang optimal.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon"></div>
+<h3>Keamanan Terjamin</h3>
+<p>Dilengkapi dengan sistem keamanan terbaik untuk melindungi data dan informasi Anda.</p>
+</div>
+</div>
+</section>
 
-        outputDiv.innerHTML = `
-            <p class="output-line"><span class="output-label">Nama :</span> ${nama}</p>
-            <p class="output-line"><span class="output-label">NIM :</span> ${nim}</p>
-            <p class="output-line"><span class="output-label">Usia :</span> ${usiaHasil} tahun</p>
-        `;
-    }
+<section id="about">
+<div class="about">
+<div class="about-content">
+<h2>Tentang Kami</h2>
+<p>Kami adalah tim profesional yang berdedikasi untuk menciptakan website dengan desain modern dan fungsionalitas terbaik.</p>
+ <p>Dengan pengalaman lebih dari 5 tahun di industri web development, kami telah membantu berbagai bisnis meningkatkan reka.</p>
+ <a href="#contact" class="btn">Pelajari Lebih Lanjut</a>
+</div>
+<div class="about-image">
+<img src="grid.jpg" alt="Tentang Kami">
+</div>
+</div>
+</section>
 
-    document.getElementById('btnTampilkan').addEventListener('click', tampilkanData);
-</script>
+<section id="testimonials">
+ <div class="container">
+ <div class="section-title">
+ <h2>Apa Kata Klien Kami</h2>
+ <p>Berikut adalah beberapa testimoni dari klien yang telah menggunakan jasa kami</p>
+</div>
+<div class="testimonial-grid">
+ <div class="testimonial-card">
+ <div class="testimonial-text">
+ "Website yang dibuat sangat responsif dan sesuai dengan kebutuhan bisnis kami. Proses pengerjaan cepat dan hasilnya memuaskan."
+ </div>
+ <div class="testimonial-author">
+ <div class="author-avatar">AS</div>
+ <div>
+ <h4>Ahmad Surya</h4>
+ <p>CEO TechSolution</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-text">
+ "Tim sangat profesional dan komunikatif. Hasil akhir website melebihi ekspektasi kami. Sangat direkomendasikan!"
+ </div>
+ <div class="testimonial-author">
+ <div class="author-avatar">RD</div>
+ <div>
+ <h4>Rina Dewi</h4>
+ <p>Pemilik Butik Hewah</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-text">
+ "Website yang dibuat membantu meningkatkan penjualan online kami secara signifikan. Desainnya modern dan user-friendly."
+ </div>
+ <div class="testimonial-author">
+ <div class="author-avatar">BS</div>
+ <div>
+ <h4>Budi Santoso</h4>
+ <p>Manager Toko Online</p>
+ </div>
+ </div>
+ </div>
+</div>
+</div>
+</section>
 
+<section id="contact">
+<div class="section-title">
+<h2>Hubungi Kami</h2>
+<p>Silakan hubungi kami untuk konsultasi atau informasi lebih lanjut</p>
+</div>
+<div class="contact-form">
+<form onsubmit="return validateForm()">
+<div class="form-group">
+<label for="name">Nama Lengkap</label>
+<input type="text" id="name" placeholder="Masukkan nama lengkap">
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" placeholder="Masukkan alamat email">
+</div>
+<div class="form-group">
+<label for="subject">Subjek</label>
+<input type="text" id="subject" placeholder="Masukkan subjek pesan">
+</div>
+<div class="form-group">
+<label for="message">Pesan</label>
+<textarea id="message" placeholder="Tulis pesan Anda di sini"></textarea>
+</div>
+<button type="submit" class="btn">Kirim Pesan</button>
+</form>
+</div>
+</section>
+
+</div>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>Tentang Kami</h3>
+<p>Kami adalah tim profesional yang berdedikasi untuk menciptakan website dengan desain modern dan fungsionalitas terbaik.</p>
+ <div class="social-links">
+<a href="#">FB</a>
+<a href="#">TH</a>
+<a href="#">IG</a>
+</div>
+</div>
+<div class="footer-column">
+<h3>Link Cepat</h3>
+<ul>
+<li><a href="#home">Beranda</a></li>
+<li><a href="#features">Fitur</a></li>
+<li><a href="#about">Tentang</a></li>
+<li><a href="#testimonials">Testimoni</a></li>
+<li><a href="#contact">Kontak</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Layanan</h3>
+<ul>
+<li><a href="#">Web Development</a></li>
+<li><a href="#">UI/UX Design</a></li>
+<li><a href="#">Digital Marketing</a></li>
+<li><a href="#">SEO Optimization</a></li>
+<li><a href="#">Maintenance</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Kontak</h3>
+<ul>
+<li>Jl. Contoh No. 123, Jakarta</li>
+<li>info@weblayout.com</li>
+<li>+62 812 3456 7890</li>
+<li>Senin - Jumat: 9:00-17:00</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p>&copy; 2023 WebLayout. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
 </body>
 </html>
