@@ -14,7 +14,6 @@ body {
     color: #fff;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -26,7 +25,7 @@ body {
     font-size: 26px;
     font-weight: bold;
 }
-/* BRAND (LOGO + FOTO) */
+
 .brand {
     display: flex;
     align-items: center;
@@ -84,7 +83,6 @@ body {
     line-height: 1.7;
 }
 
-/* BUTTONS */
 .buttons {
     margin: 30px 0;
 }
@@ -249,7 +247,7 @@ body {
     color: #000;
 }
 
-/* CONTACT */
+
 .contact {
     padding: 80px;
     text-align: center;
@@ -277,14 +275,14 @@ body {
     cursor: pointer;
 }
 
-/* FOOTER */
+
 footer {
     padding: 20px;
     text-align: center;
     background: #020617;
 }
 
-/* SUCCESS MESSAGE */
+
 .success-message {
     display: none;
     margin-top: 40px;
