@@ -2,17 +2,44 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --bg-main: #071c2f;
+    --bg-secondary: #061726;
+    --bg-card: #0b253d;
+    --text-main: #ffffff;
+    --text-muted: #cbd5e1;
+    --accent: #00bfff;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 00.1s;
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    color: #000;
 }
 
 body {
-    background: #071c2f;
-    color: #fff;
+    background: var(--bg-main);
+    color: var(--text-main);
 }
+
 
 .navbar {
     display: flex;
@@ -94,8 +121,6 @@ body {
     margin-right: 15px;
     transition: 0.3s;
 }
-
-
 
 .primary {
     background: #00bfff;
@@ -392,4 +417,13 @@ footer {
     footer {
         font-size: 14px;
     }
+}
+
+.light-mode {
+    --bg-main: #f8fafc;
+    --bg-secondary: #e5e7eb;
+    --bg-card: #ffffff;
+    --text-main: #020617;
+    --text-muted: #334155;
+    --accent: #0284c7;
 }
