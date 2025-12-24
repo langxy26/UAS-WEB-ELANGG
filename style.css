@@ -137,7 +137,7 @@ body {
 
 /* IMAGE */
 .hero-image img {
-    width: 420px;
+    max-width: 100%;
     filter: drop-shadow(0 0 35px rgba(0,191,255,0.4));
 }
 
@@ -316,5 +316,80 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* =====================
+   RESPONSIVE MOBILE
+===================== */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 25px;
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column-reverse;
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    /* BUTTON */
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        margin-right: 0;
+    }
+
+    /* SOCIAL */
+    .social {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* IMAGE */
+    .image-frame {
+        width: 260px;
+        margin-bottom: 30px;
+    }
+
+    /* PROJECT */
+    .projects {
+        padding: 40px 25px;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding: 40px 25px;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
