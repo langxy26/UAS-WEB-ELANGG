@@ -8,7 +8,6 @@ html {
     --bg-card: #0b253d;
     --text-main: #ffffff;
     --text-muted: #cbd5e1;
-    html {
     scroll-behavior: smooth;
 }
 
@@ -423,7 +422,7 @@ body {
 .project-info a:hover {
     background: #00bfff;
     color: #000;
-}
+}   
 
 /* GALLERY */
 .gallery {
