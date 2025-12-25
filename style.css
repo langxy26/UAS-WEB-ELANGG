@@ -161,8 +161,6 @@ footer {
     text-align: center;
     background: #020617;
 }
---accent: #00bfff;
-}
 
 * {
     margin: 0;
@@ -426,8 +424,8 @@ body {
 
 /* GALLERY */
 .gallery {
-    padding: 80px;
-    background: #071c2f;
+    padding: 50px;
+    background: #061726
     text-align: center;
 }
 
