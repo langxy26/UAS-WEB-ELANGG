@@ -456,6 +456,77 @@ body {
     border-radius: 10px;
 }
 
+.cv {
+    padding: 100px 25px;
+    background: #071c2f;
+    text-align: center;
+}
+
+/* WRAPPER BIAR KE TENGAH */
+.cv-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTAINER DIBATASI */
+.cv-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* CARD */
+.cv-card {
+    background: linear-gradient(180deg, #0b253d, #081e33);
+    padding: 35px;
+    border-radius: 20px;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.cv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0,191,255,0.3);
+}
+
+.cv-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #00bfff;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* ITEM */
+.cv-item {
+    padding-left: 18px;
+    margin-bottom: 24px;
+    border-left: 2px solid rgba(0,191,255,0.4);
+}
+
+.cv-item:last-child {
+    margin-bottom: 0;
+}
+
+.cv-item h4 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.cv-item span {
+    font-size: 14px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.cv .btn {
+    display: inline-block;
+    margin-top: 30px;
+}
 
 .contact {
     padding: 80px;
@@ -528,9 +599,7 @@ footer {
     }
 }
 
-/* =====================
-   RESPONSIVE MOBILE
-===================== */
+
 @media (max-width: 768px) {
 
     /* NAVBAR */
@@ -591,6 +660,10 @@ footer {
     /* PROJECT */
     .projects {
         padding: 40px 25px;
+    }
+
+    .cv-container {
+    grid-template-columns: 1fr;
     }
 
     /* CONTACT */
